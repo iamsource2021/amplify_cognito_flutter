@@ -5,6 +5,8 @@ import 'dashboard_screen.dart';
 import 'login_screen.dart';
 import 'transition_route_observer.dart';
 import 'package:amplify_cognito_flutter/HelperMaterialColor.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -22,7 +24,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Login Demo',
+      title: 'Login',
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en', ''), // English, no country code
+        Locale('es', ''), // Spanish, no country code
+      ],
       theme: ThemeData(
         // brightness: Brightness.dark,
         primarySwatch:

@@ -6,6 +6,7 @@ import 'constants.dart';
 import 'custom_route.dart';
 import 'dashboard_screen.dart';
 import 'users.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = '/auth';
@@ -36,7 +37,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterLogin(
-      title: null,
+      title: AppLocalizations.of(context)!.helloWorld,
       logo: 'assets/images/gbricon.png',
       logoTag: Constants.logoTag,
       titleTag: Constants.titleTag,
