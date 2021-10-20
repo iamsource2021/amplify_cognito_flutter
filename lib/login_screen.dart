@@ -1,7 +1,6 @@
 import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'constants.dart';
 import 'custom_route.dart';
 import 'dashboard_screen.dart';
@@ -10,6 +9,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = '/auth';
+
+  const LoginScreen({Key? key}) : super(key: key);
 
   Duration get loginTime => Duration(milliseconds: timeDilation.ceil() * 2250);
 
@@ -34,14 +35,35 @@ class LoginScreen extends StatelessWidget {
     });
   }
 
+  LoginMessages lLoginMessages(BuildContext context) {
+    return LoginMessages(
+        userHint:AppLocalizations.of(context)!.userHint,
+        passwordHint:AppLocalizations.of(context)!.passwordHint,
+        confirmPasswordHint:AppLocalizations.of(context)!.confirmPasswordHint,
+        forgotPasswordButton:AppLocalizations.of(context)!.forgotPasswordButton,
+        loginButton: AppLocalizations.of(context)!.loginButton,
+        signupButton: AppLocalizations.of(context)!.signupButton,
+        recoverPasswordButton:AppLocalizations.of(context)!.recoverPasswordButton,
+        recoverPasswordIntro:AppLocalizations.of(context)!.recoverPasswordIntro,
+        recoverPasswordDescription:AppLocalizations.of(context)!.recoverPasswordDescription,
+        goBackButton:AppLocalizations.of(context)!.goBackButton,
+        confirmPasswordError:AppLocalizations.of(context)!.confirmPasswordError,
+        recoverPasswordSuccess:AppLocalizations.of(context)!.confirmPasswordError,
+        flushbarTitleError:AppLocalizations.of(context)!.flushbarTitleError,
+        flushbarTitleSuccess:AppLocalizations.of(context)!.flushbarTitleSuccess,
+        providersTitle:AppLocalizations.of(context)!.providersTitle
+      );
+  }  
+
   @override
   Widget build(BuildContext context) {
     return FlutterLogin(
-      title: AppLocalizations.of(context)!.helloWorld,
+      title: AppLocalizations.of(context)!.title,
       logo: 'assets/images/gbricon.png',
       logoTag: Constants.logoTag,
       titleTag: Constants.titleTag,
       navigateBackAfterRecovery: true,
+      messages: lLoginMessages(context),
       userValidator: (value) {
         if (!value!.contains('@') || !value.endsWith('.com')) {
           return "Email must contain '@' and end with '.com'";

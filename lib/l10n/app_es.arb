@@ -1,3 +1,18 @@
 {
-    "helloWorld": "¡Hola Mundo!"
+    "userHint":"Correo Electrónico",
+    "passwordHint":"Contraseña",
+    "title":"Iniciar sesión",
+    "loginButton":"Inicio de sesión",
+    "signupButton":"Registro",
+    "confirmPasswordHint":"Confirmar contraseña",
+    "forgotPasswordButton":"¿Olvidaste la contraseña?",
+    "recoverPasswordButton":"Recuperar",
+    "recoverPasswordIntro":"Restablecer la contraseña aquí",
+    "recoverPasswordDescription":"Le enviaremos su contraseña en texto plano a esta cuenta de correo electrónico",
+    "goBackButton":"Volver",
+    "confirmPasswordError":"La contraseña no coincide.",
+    "recoverPasswordSuccess":"Recuperación de la contraseña con éxito",
+    "flushbarTitleError":"Algo ha ido mal, inténtalo de nuevo",
+    "flushbarTitleSuccess":"Fue generado con éxito",
+    "providersTitle":"providersTitle"
 }

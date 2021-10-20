@@ -1,6 +1,18 @@
 {
-    "helloWorld": "Hello World!",
-    "@helloWorld": {
-      "description": "The conventional newborn programmer greeting"
-    }
+    "userHint":"E-mail",
+    "passwordHint":"Password",
+    "title":"Log in",
+    "loginButton":"Login",
+    "signupButton":"Register",
+    "confirmPasswordHint":"Confirm password",
+    "forgotPasswordButton":"Forgot password?",
+    "recoverPasswordButton":"Recover",
+    "recoverPasswordIntro":"Reset your password here",
+    "recoverPasswordDescription":"We will send your plain-text password to this email account",
+    "goBackButton":"Go back",
+    "confirmPasswordError":"Password do not match!",
+    "recoverPasswordSuccess":"Password recovery successful",
+    "flushbarTitleError":"Something went wrong, try again.",
+    "flushbarTitleSuccess":"Was generated successfully",
+    "providersTitle":"providersTitle"
 }
